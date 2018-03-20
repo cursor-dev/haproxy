@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/sbin/haproxy -c -q -f /config/haproxy.cfg
+/usr/sbin/haproxy -c -f /config/haproxy.cfg
