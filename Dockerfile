@@ -16,4 +16,8 @@ EXPOSE 80
 VOLUME /config
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+COPY init /init
+
+RUN chmod +x /init
+
+ENTRYPOINT ["/init"]
