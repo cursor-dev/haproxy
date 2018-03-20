@@ -2,7 +2,6 @@ FROM cursor/mbase
 MAINTAINER Ryan Pederson <ryan@pederson.ca>
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
-  && apt-get install -qy nzbdrone mediainfo \
   && apt-get update -q \
   && apt-get install -qy haproxy \
   && apt-get clean \
